@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sho Shoooo!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="title">Happy Birthday!</h1>
+            <h2 class="subtitle">To my wonderful Sel</h2>
+            <p class="description">A special gift for the most special person to Me.</p>
+            <button class="button" onclick="scrollToSection('memories')">كل ذكرى معاكي ميتشبعش منها بس دول الأقرب لقلبي نوعا ما</button>
+        </div>
+        <div class="floating-elements">
+            <div class="float-1"></div>
+            <div class="float-2"></div>
+            <div class="float-3"></div>
+        </div>
+    </section>
+
+    <!-- Memories Gallery -->
+    <section id="memories" class="memories">
+        <div class="section-header">
+            <span class="icon">📸</span>
+            <h2>Our Beautiful Memories</h2>
+        </div>
+        <div class="memories-grid">
+            <!-- Memory cards will be added here by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Love Letter -->
+    <section id="letter" class="love-letter">
+        <div class="section-header">
+            <span class="icon">💌</span>
+            <h2>My Love Letter to You</h2>
+        </div>
+        <div class="letter-container">
+            <div class="letter closed" id="letter-content">
+                <div class="letter-front">
+                    <img src="https://cdn-icons-png.flaticon.com/512/6168/6168667.png" alt="Letter" class="letter-icon">
+                    <button class="button" onclick="openLetter()">افتحي كدا</button>
+                </div>
+                <div class="letter-inside hidden">
+                    <p>كل سنة وأنتي طيبة وكل سنة وأنتي معايا يا أجمل حد فالدنيا
+                        <br> شكرا على وجودك جمبي فكل وقت وشكرا عشان بتستحمليني كتير خصوصا السنادي مع ضغط التخرج وشكرا عشان وثقتي فيا وأتمسكتي بيا حتى لما كان عندك فرص تبعدي <br> مهما قولت وعيدت عنك مش هوفي بس انا مغرم بعيونك اوي وبحب صوتك وبحب شخصيتك وخوفك عليا وحبك ليا وبحب شكلك قد ايه كل مرة بيبقى مميز مع شوية ثوابت كفيلة توقعني فحبك كل مرة ولو شوفتها كل ثانية باقية من عمري <br> هي نفس الأبتسامة ونفس رسمة العيون ونفس احمرار خدودك ولا أجدعها بلاشر ونفس طيبتك وطريقتك العسل فالتعبير والتعامل مع الناس حتى اللي متعرفيهمش ونفس اخلاقك ومساعدتك للناس بكل ما اتيح ليكي من مساعدة <br> انتي جميلة أوي عشان انتي شيماء <br> انتي جميلة فكل أحوالك مش ناقصك غير تبقي مراتي عشان اقدر احضنك براحتي واقولك الكلام دا وانا لامسك وواخدك بين دراعي <br> انا بحبك أوي يا شيماء والله بحبك اكتر من اي حاجة كانت او هتكون فالدنيا وأتمني الليتر الجاي زي دا يبقي وانتي خطيبتي بقى او مراتي ليه لا انا مش هبطل احاول يوم عشانك يا شوشتي <br> انا بسعى دايما عشان اكون الراجل اللي يصونك ويشيلك فعينه ويعاملك زي ما تستحقي بسعي أكون عند حسن ظن حبيبي ولو طال الزمن<br> كل سنة وانتي نور حياتي وكل سنة وأنا المتيم فحبك .... حبيبك دايما, زياد</p></p>
+                    <p>As you celebrate another year of your beautiful life...</p>
+                    <p>Forever yours,<br>Zeyad</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Birthday Cake -->
+    <section id="cake" class="birthday-cake">
+        <div class="section-header">
+            <span class="icon">🎂</span>
+            <h2>فكرت اعملها فرايد تشيكن بس معرفتش أعمل الديزاين فا سامحيني بقى , انتي كدا كدا بتحبي التورتة برضه</h2>
+        </div>
+        <div class="cake-container">
+            <div class="cake">
+                <div class="cake-layers">
+                    <div class="layer-1"></div>
+                    <div class="layer-2"></div>
+                    <div class="layer-3"></div>
+                    <div class="candle">
+                        <div class="flame hidden" id="flame"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cake-controls">
+                <button class="button" id="cakeButton" onclick="handleCake()">ولعي يختي الشمع</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wishes Section -->
+    <section id="wishes" class="wishes">
+        <div class="section-header">
+            <span class="icon">🎁</span>
+            <h2>أمنياتي انا ؟ بجد مش عارفة؟</h2>
+            <h3>خلاص يستي وأمري لله هقولك جزء منهم</h3>
+            <button onclick="window.open('https://zeyad220.github.io/Since-I-found-Myself/','_blank')" style=" background-color: #6f0a3c; color: white; border: solid; font-size: 16px; cursor: pointer;" >بعد ما تشوفيهم نستأذن حضرتك تدوسي هنا</button>
+
+        </div>
+        <div class="wishes-container">
+            <div class="wish-card" id="wishCard">
+                <!-- Wishes will be displayed here -->
+            </div>
+            <div class="wish-controls">
+                <button class="button" onclick="prevWish()">قلب قلب يعم</button>
+                <button class="button primary" onclick="nextWish()">قلب برضه قلب</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="bottom-nav">
+        <button onclick="scrollToSection('home')" class="nav-item">
+            <span class="icon">🏠</span>
+            <span class="label">Home</span>
+        </button>
+        <button onclick="scrollToSection('memories')" class="nav-item">
+            <span class="icon">📸</span>
+            <span class="label">Memories</span>
+        </button>
+        <button onclick="scrollToSection('letter')" class="nav-item">
+            <span class="icon">💌</span>
+            <span class="label">Letter</span>
+        </button>
+        <button onclick="scrollToSection('cake')" class="nav-item">
+            <span class="icon">🎂</span>
+            <span class="label">Cake</span>
+        </button>
+        <button onclick="scrollToSection('wishes')" class="nav-item">
+            <span class="icon">🎁</span>
+            <span class="label">Wishes</span>
+        </button>
+    </nav>
+
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script src="script.js"></script>
+</body>
+</html>
